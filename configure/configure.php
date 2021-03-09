@@ -15,6 +15,7 @@ add_action( 'init', '_custom_theme_register_menu' );
 function custom_setup() {
 	// IMAGES
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'featured-image', 895, 520, true ); // 220 pixels wide by 180 pixels tall, hard crop mode
 
 	// TITLE TAGS
 	add_theme_support('title-tag');

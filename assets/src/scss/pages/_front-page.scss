@@ -1,4 +1,93 @@
+/* --------------------------------------------------------------------
+ * Front page
+ * ----------------------------------------------------------------- */
+.site-front-page {    
+    padding: 15px 0;
+    position: relative;
+    &::before {
+        content: '';
+        background-image: linear-gradient(300grad,$primary-theme-color 0, $primary-theme-color);
+        position: absolute;        
+        right: 0;
+        bottom: 0;
+        width: 20%;
+        height: 100%;
+    }
+    .site-intro {
+        position: relative;
+    }
+    .intro-content {
+        align-content: center;        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+        width: 100%;      
+   
+        h2 {
+            color: $primary-theme-color; 
+        }
+        
+    }
+    .intro-visual {
+        display: flex;
+        justify-content: flex-end; 
+        overflow: hidden;
+        position: relative;       
+        
+        img {
+            border-radius: 100px 0 100px 0;
+            
+        }
+    }
+    span {
+        color: $primary-theme-color;
+    }
+}
 
-.home {
+
+/* --------------------------------------------------------------------
+ * Variables: MediaQueries
+ * ----------------------------------------------------------------- */
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+ 
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .site-front-page {
+        padding: 60px 0;
+        &::before {
+            left: 50%;
+            width: 50%;
+        }
+        .intro-content {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            transform: translateY(-50%);
+            padding: 0 40px;
+        }
+        .intro-visual {
+            &::after {
+                width: 693px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 
 }

@@ -1,18 +1,24 @@
-
+/* --------------------------------------------------------------------
+ * Base
+ * ----------------------------------------------------------------- */
 html {
     font-size: 62.5%;
     -ms-text-size-adjust: 100%;
-}
-
-html, body {
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;    
     -webkit-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+    text-rendering: optimizeLegibility;
+}
+
 body {
-    font-size: 1.4rem;
+    background-color: white;
+    font-family: $body-font-family;
+    font-size: $body-default-font-size;
+    font-weight: 400;
+    margin: 0;
 }
 
 a,
@@ -24,9 +30,50 @@ a:active {
 }
 
 *, *:hover, *:focus {
-    outline:0 !important;
+    box-sizing: border-box;
+    outline:0;
 }
 
 .transition, %transition {
     transition:all 0.3s ease-in-out;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: $heading-font-family;
+    font-size: $heading-default-font-size;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------
+ * Variables: MediaQueries
+ * ----------------------------------------------------------------- */
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+ 
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
 }

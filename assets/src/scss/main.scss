@@ -7,10 +7,11 @@
 @import "abstracts/variables";
 
 // vendors
-@import "node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/bootstrap/scss/bootstrap";
 
 // vendors overrides
-// @import "vendors/myvendor";
+@import "vendors/bootstrap/bootstrap",
+        "vendors/hamburgers/hamburgers";
 
 // base
 @import "base/fonts",
