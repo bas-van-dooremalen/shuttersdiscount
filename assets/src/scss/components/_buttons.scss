@@ -22,8 +22,7 @@
         margin-top: 40px;
     }
 
-    &.btn-primary {
-        box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .20);
+    &.btn-primary {        
         color: black;
         background-color: $primary-theme-color;
         border: .2rem solid $primary-theme-color;
@@ -49,6 +48,7 @@
         color: white;
         background-color: black;
         border: .2rem solid black;
+        box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .20);
         font-family: $secondary-theme-font;
 
         &:hover {

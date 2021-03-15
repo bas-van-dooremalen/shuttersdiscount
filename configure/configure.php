@@ -6,7 +6,7 @@ function _custom_theme_register_menu()
     register_nav_menus(
         array(
             'menu-main' => __( 'Menu principal' ),
-            //'menu-footer' => __( 'Menu footer' ),
+            'menu-footer' => __( 'Menu footer' ),
         )
     );
 }

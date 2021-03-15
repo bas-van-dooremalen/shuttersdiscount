@@ -4,16 +4,44 @@
 footer {
     &.site-footer {
         background-color: black;
+        background: linear-gradient(95deg, rgba(0,0,0,1) 0%, rgba(64,64,64,1) 100%);
         color: white;
         padding-bottom: 20px;
         padding-top: 20px;
 
-        .footer-intro {
-            color: white;            
-            font-size: 1.4rem;
-            p {
-                margin-top: 10px;
-                margin-bottom: 0;
+        .nav {
+            padding-top: 20px;
+        }
+        .column,
+        .nav {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .social-media {
+            display: flex;
+            padding-top: 20px;
+            li {
+                padding-left: 15px;
+                padding-right: 15px;
+                a {
+                    &:hover {
+                        i {
+                            color: $primary-theme-color;
+                        }
+                    }
+                }
+                i {
+                    font-size: 2.9rem;
+                    transition: all .2s ease-out;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
             }
         }
 
@@ -26,15 +54,33 @@ footer {
                 color: white;
                 font-size: 1.6rem;
                 font-family: $primary-theme-font;
-                font-weight: inherit;
+                font-weight: 600;
                 margin-bottom: 20px;
                 display: flex;
             }
         }
 
     }
+    .site-footer-text {
+        padding-top: 40px;            
+    }
 }
- 
+
+.site-secondary-footer {
+    background-color: $primary-theme-color;
+    padding-bottom: 20px;
+    padding-top: 20px;    
+    .site-copy {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        
+        .site-footer-navigation {
+            padding-top: 20px;
+        }
+    }
+}
+
 /* --------------------------------------------------------------------
  * Variables: MediaQueries
  * ----------------------------------------------------------------- */
@@ -52,7 +98,26 @@ footer {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-   
+   footer {
+       &.site-footer {
+            .column {
+                flex: 0 0 33.3333333333%;
+                max-width: 33.3333333333%;
+                padding-left: 15px;
+            }
+
+            .nav {
+                flex: 0 0 66.6666666667%;
+                max-width: 66.6666666667%;
+                padding-top: 0;
+                padding-right: 15px;
+
+                ul {
+                    column-count: 2;
+                }
+            }
+       }
+   }
 }
 
 // Large devices (desktops, 992px and up)
@@ -75,10 +140,28 @@ footer {
             .nav {
                 flex: 0 0 66.6666666667%;
                 max-width: 66.6666666667%;
+                padding-top: 0;
                 padding-right: 15px;
 
                 ul {
                     column-count: 4;
+                }
+            }
+       }
+   }
+
+   .site-secondary-footer {
+       .site-copy {
+            justify-content: space-between;
+            flex-direction: row;
+            .site-footer-navigation {
+                padding-top: 0;
+                ul {
+                    display: flex;
+                    li {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
                 }
             }
        }
