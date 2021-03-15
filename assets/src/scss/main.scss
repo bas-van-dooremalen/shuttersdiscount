@@ -8,10 +8,15 @@
 
 // vendors
 // @import "node_modules/bootstrap/scss/bootstrap";
-
+ 
 // vendors overrides
 @import "vendors/bootstrap/bootstrap",
-        "vendors/hamburgers/hamburgers";
+        "vendors/fancybox/fancybox",
+        "vendors/fontawesome/fontawesome",
+        "vendors/fontawesome/brands",
+        "vendors/fontawesome/regular",
+        "vendors/fontawesome/solid",
+        "vendors/hamburgers/hamburgers";  
 
 // base
 @import "base/fonts",
@@ -25,6 +30,7 @@
 
 // components
 @import "components/buttons",
+        "components/forms",
         "components/modal";
 
 // pages

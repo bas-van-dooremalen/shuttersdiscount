@@ -10,22 +10,21 @@
 <body <?php body_class(); ?>>
 <div class="site">
 	<header class="site-header" id="header">
+	
+		<div class="site-branding">
+			<a href="<?php echo get_site_url(); ?>" title="<?php echo $blog_title= get_bloginfo( 'name' ); ?>, <?php echo $blog_title= get_bloginfo( 'description' ); ?>" class="site-logo">
+				<img src="<?php echo bloginfo('template_url'); ?>/assets/dist/img/logo-shuttersdiscount.png" alt="<?php echo $blog_title= get_bloginfo( 'name' ); ?>" width="200" height="116" />
+			</a>
+		</div>
 		
-			<div class="site-branding">
-				<a href="<?php echo get_site_url(); ?>" title="<?php echo $blog_title= get_bloginfo( 'name' ); ?>, <?php echo $blog_title= get_bloginfo( 'description' ); ?>" class="site-logo">
-					<img src="<?php echo bloginfo('template_url'); ?>/assets/dist/img/logo.png" alt="<?php echo $blog_title= get_bloginfo( 'name' ); ?>" width="180" height="72" />
-				</a>
-			</div>
-			
-			<button class="hamburger hamburger--elastic" type="button" id="toggle">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-			</button>  
-			
-			<nav class="site-navigation" id="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'menu_id' => 'menu-main' ) ); ?>
-			</nav>
+		<button class="hamburger hamburger--elastic" type="button" id="toggle">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>  
+		
+		<nav class="site-navigation" id="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'menu_id' => 'menu-main' ) ); ?>
+		</nav>
 		
 	</header>
-

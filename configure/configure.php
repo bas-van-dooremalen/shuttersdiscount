@@ -16,7 +16,8 @@ function custom_setup() {
 	// IMAGES
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'featured-image', 895, 520, true ); // 220 pixels wide by 180 pixels tall, hard crop mode
-
+	add_image_size( 'shutters-image', 650, 350, true);
+ 
 	// TITLE TAGS
 	add_theme_support('title-tag');
 

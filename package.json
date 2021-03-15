@@ -67,10 +67,12 @@
     "webpack-stream": "6.1.2"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "4.6.0",
     "breakpoint-sass": "2.7.1",
     "breakpoint-slicer": "2.0.0",
     "jquery": "^3.5.1",
+    "masonry-layout": "^4.2.2",
     "node-sass": "^4.14.1",
     "popper.js": "1.16.1"
   }

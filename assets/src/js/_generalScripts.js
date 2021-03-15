@@ -1,8 +1,10 @@
 import $ from "jquery";
+window.jQuery = $; 
+require('@fancyapps/fancybox/dist/jquery.fancybox');
 
 class General {
 	constructor() {
-		this.testVariable = 'script working';
+		this.testVariable = 'script working'; 
 		this.init();
 	}
 

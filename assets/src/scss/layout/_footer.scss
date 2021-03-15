@@ -1,3 +1,91 @@
 /* --------------------------------------------------------------------
  * Footer
  * ----------------------------------------------------------------- */
+footer {
+    &.site-footer {
+        background-color: black;
+        color: white;
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        .footer-intro {
+            color: white;            
+            font-size: 1.4rem;
+            p {
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            color: white;
+        }
+        
+        span {
+            &.title{ 
+                color: white;
+                font-size: 1.6rem;
+                font-family: $primary-theme-font;
+                font-weight: inherit;
+                margin-bottom: 20px;
+                display: flex;
+            }
+        }
+
+    }
+}
+ 
+/* --------------------------------------------------------------------
+ * Variables: MediaQueries
+ * ----------------------------------------------------------------- */
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+@media (min-width: 375px) {
+    
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+   
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    footer {
+        &.site-footer {
+            padding-bottom: 40px;
+            padding-top: 40px;
+        
+            .footer-intro {
+               flex-direction: row;
+            }
+
+            .column {
+                flex: 0 0 33.3333333333%;
+                max-width: 33.3333333333%;
+                padding-left: 15px;
+            }
+
+            .nav {
+                flex: 0 0 66.6666666667%;
+                max-width: 66.6666666667%;
+                padding-right: 15px;
+
+                ul {
+                    column-count: 4;
+                }
+            }
+       }
+   }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
