@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 <div class="site">
 	<header class="site-header" id="header">
-	
+		
 		<div class="site-branding">
 			<a href="<?php echo get_site_url(); ?>" title="<?php echo $blog_title= get_bloginfo( 'name' ); ?>, <?php echo $blog_title= get_bloginfo( 'description' ); ?>" class="site-logo">
 				<img src="<?php echo bloginfo('template_url'); ?>/assets/dist/img/logo-shuttersdiscount.png" alt="<?php echo $blog_title= get_bloginfo( 'name' ); ?>" width="200" height="116" />

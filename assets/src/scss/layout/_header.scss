@@ -2,12 +2,13 @@
  * Header
  * ----------------------------------------------------------------- */
 .site-header {
-    background-color: white;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     padding: 0 15px;
-    position: relative;
+    position: absolute;
+    width: 100%;
     z-index: 5;
     .site-branding {         
         position: relative;
@@ -15,66 +16,68 @@
         z-index: 10;           
     }
 
-    .site-navigation {
-        background: white;
-        border-bottom-right-radius: 10rem;
-        box-shadow: 0 0.2rem 2.3rem 0 rgba(30, 30, 30, .5);
-        font-size: 1.9rem;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 98%;
-        width: 100%;
-        transition: transform .4s cubic-bezier(.42,0,.18,.99);
-        overflow-y: auto;
-        opacity: 0;
-        padding-top: 140px;
-        will-change: transform;
-        transform: translate3d(0,-100%,0);        
-        z-index: 1;
-        ul {
-            line-height: 2;
-            padding: 0 15px;
+    @media (max-width: 1023px) {
+        .site-navigation {
+            background: white;
+            border-bottom-right-radius: 10rem;
+            box-shadow: 0 0.2rem 2.3rem 0 rgba(30, 30, 30, .5);
+            font-size: 1.9rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 98%;
+            width: 100%;
+            transition: transform .4s cubic-bezier(.42,0,.18,.99);
+            overflow-y: auto;
+            opacity: 0;
+            padding-top: 140px;
+            will-change: transform;
+            transform: translate3d(0,-100%,0);        
+            z-index: 1;
+            ul {
+                line-height: 2;
+                padding: 0 15px;
 
-            li {
-                border-bottom:1px solid #dadada;
-               
-                a {
-                    text-decoration: none;
-                    @extend .transition;
-                    &:hover, 
-                    &:focus,
-                    &:active {
-                        color: $primary-theme-color;
-                    } 
+                li {
+                    border-bottom:1px solid #dadada;
+                
+                    a {
+                        text-decoration: none;
+                        transition: all .2s ease-in ;
+                        &:hover, 
+                        &:focus,
+                        &:active {
+                            color: $primary-theme-color;
+                        } 
+                    }
                 }
             }
-        }
-        &.is-open {
-            transform: translateZ(0);
-            opacity: 1;
-            ul {
-                li {
-                    animation: menu-column-transition-opening .2s cubic-bezier(.785,.135,.15,.86) both;
-                    &:nth-child(1n) {
-                        animation-delay: .8s
-                    }
-                    &:nth-child(2n) {
-                        animation-delay: 1s;
-                    }
-                    &:nth-child(3n) {
-                        animation-delay: 1.2s;
-                    }
-                    &:nth-child(4n) {
-                        animation-delay: 1.4s;
-                    }
-                    &:nth-child(5n) {
-                        animation-delay: 1.6s;
-                    }
-                    &:nth-child(6n) {
-                        animation-delay: 1.8s;
+            &.is-open {
+                transform: translateZ(0);
+                opacity: 1;
+                ul {
+                    li {
+                        animation: menu-column-transition-opening .2s cubic-bezier(.785,.135,.15,.86) both;
+                        &:nth-child(1n) {
+                            animation-delay: .8s
+                        }
+                        &:nth-child(2n) {
+                            animation-delay: 1s;
+                        }
+                        &:nth-child(3n) {
+                            animation-delay: 1.2s;
+                        }
+                        &:nth-child(4n) {
+                            animation-delay: 1.4s;
+                        }
+                        &:nth-child(5n) {
+                            animation-delay: 1.6s;
+                        }
+                        &:nth-child(6n) {
+                            animation-delay: 1.8s;
+                        }
                     }
                 }
             }
@@ -93,5 +96,105 @@
         -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 1
+    }
+}
+
+
+/* --------------------------------------------------------------------
+ * Variables: MediaQueries
+ * ----------------------------------------------------------------- */
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .site-header {
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .site-navigation {
+        .menu {
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;            
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .site-header {
+        max-width: 720px;
+        .site-navigation {
+            .menu {
+                max-width: 720px;
+                margin-left: auto;
+                margin-right: auto;            
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .site-header {
+        max-width: 960px;
+        .site-navigation {
+            .menu {
+                max-width: 960px;
+                margin-left: auto;
+                margin-right: auto;            
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-header {
+        align-items: center;
+        background-color: transparent;
+        justify-content: flex-start;
+        max-width: 992px;
+        .site-branding {
+            padding-right: 15px;
+        }
+    }
+
+    nav {
+        &.site-navigation {
+            width: 100%;
+            ul {
+                display: flex;
+                li {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    &:nth-child(4) { margin-left: auto; }
+                    &.current_page_item  {
+                        a {
+                            border-color: $secondary-theme-color;
+                        }
+                    }
+                }
+            }
+            a {
+                border-bottom: 1px solid transparent;
+                text-decoration: none;
+                transition: all .1s ease-in-out;
+                &:hover {
+                    border-color: $secondary-theme-color;                    
+                }
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .site-header {
+        max-width: 1140px;
     }
 }
