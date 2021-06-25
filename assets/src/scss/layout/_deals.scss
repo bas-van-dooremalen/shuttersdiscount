@@ -1,0 +1,123 @@
+.site-deals {
+    &.highlighted {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .container:last-child {
+            overflow: hidden;
+            padding-top: 2em;
+            position: relative;
+        }
+        
+        a {
+            &:not(.deal) {                
+                position: relative;
+                margin-bottom: 1.5em;
+                @media (min-width: 992px) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.deal{
+                display: flex;
+                margin-bottom: 1.5em;
+                text-decoration: none;
+               
+                &:hover {
+                    .description:not(.short) {
+                        background-color: white;
+                        padding: 2em;
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                    .body {
+                        picture {
+                            &::before {
+                                animation: shine .75s;
+                            }
+                        }
+                    }
+                }
+
+                .body {
+                    display: flex;
+                    flex-direction: column;
+                    .item {
+                        align-items: center;
+                        bottom: 17vh;
+                        @media (min-width: 992px) {
+                            bottom: 13vh;
+                        }
+                        display: flex;
+                        justify-content: space-between;
+                        width: calc(100% - 55px);
+                        position: absolute;
+
+                        .wrap {
+                            background-color: white;
+                            border-radius: 0 50px 50px 0;                                                    
+                            padding: 10px 25px 10px 5px;
+                            line-height: 1;
+                            z-index: 1;
+                            
+                            h3 {
+                                color: $kings-theme-color;
+                                font-size: 1.7rem;
+                                text-transform: lowercase;
+                                margin: 0;
+                            }
+
+                            .price {
+                                color: #333;
+                                display: flex;                            
+                                font-size: 1.4rem;
+                            }
+                        }
+                        
+                        .info {
+                            align-items: center;
+                            background-color: $kings-theme-color;
+                            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+                            border-radius: 100%;
+                            display: flex;
+                            justify-content: center;
+                            height: 35px;
+                            width: 35px;
+                            z-index: 1;
+                            i {
+                                color:white;
+                                font-size: 2.5rem;
+                            }                 
+                        }
+                    }
+
+                    picture {                        
+                        display: flex;
+                        overflow: hidden;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            left: -75%;
+                            z-index: 2;
+                            display: block;
+                            content: '';
+                            width: 50%;
+                            height: 100%;
+                            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                            transform: skewX(-25deg);
+                        }
+                        img {                            
+                            border-radius: 0 40px 0 40px;
+                        }
+                    }      
+                }
+            }
+        }        
+    }
+} 
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}

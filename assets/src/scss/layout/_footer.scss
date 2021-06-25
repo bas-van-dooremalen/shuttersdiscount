@@ -1,195 +1,118 @@
-/* --------------------------------------------------------------------
- * Footer
- * ----------------------------------------------------------------- */
 footer {
-    &.site-footer {
-        background-color: black;
-        background: linear-gradient(95deg, rgba(0,0,0,1) 0%, rgba(64,64,64,1) 100%);
-        color: white;
-        padding-bottom: 40px;
-        padding-top: 40px;
-
-    
-        .site-footer-items {
-            padding-left: 15px;
-            padding-right: 15px;
-            width: 100%;
-
-            .site-footer-shortcuts {
-                display: flex;
-                flex-direction: column;
-                padding-top: 15px;
-                .shortcut {
-                    padding-top: 15px;
-                }
-                a {
-                    border-bottom: 1px solid transparent;
-                    color: white;
-                    text-decoration: none;
-                    transition: all .2s ease-in-out;
-                    &:hover {
-                        border-bottom-color: white;
-                    }
-                }
-            }
-        }
-
-        .social-media {
-            display: flex;
-            padding-top: 20px;
-            li {
-                padding-left: 15px;
-                padding-right: 15px;
-                &:first-child {
-                    padding-left: 0;
-                }
-                &:last-child {
-                    padding-right: 0;
-                }
-                a {
-                    color: white;
-                    &:hover {
-                        i {
-                            color: $primary-theme-color;
-                        }
-                    }
-                }
-                i {
-                    font-size: 2.9rem;
-                    transition: all .2s ease-out;
-                }
-                &:first-child {
-                    padding-left: 0;
-                }
-                &:last-child {
-                    padding-right: 0;
-                }
-            }
-        }
-
-        
-        
-        span {
-            &.title{ 
-                color: white;
-                font-size: 1.6rem;
-                font-family: $primary-theme-font;
-                font-weight: 600;
-                display: flex;
-            }
-        }
-
-    }
-}
-
-.site-secondary-footer {
-    background-color: $primary-theme-color;
-    padding-bottom: 20px;
-    padding-top: 20px;    
-    .site-copy {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        
-        .site-footer-navigation {
-            .menu {
-                display: flex;
-                flex-direction: column;
-            }
-        }         
-        
-    }
-}
-
-/* --------------------------------------------------------------------
- * Variables: MediaQueries
- * ----------------------------------------------------------------- */
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-@media (min-width: 375px) {
-    
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    footer {
-        &.site-footer {
+    &.site-footer {              
+        .footer {
+            background-color: #c5b9ac;        
+            color: white;
+            margin-top: 40px;
             padding-bottom: 40px;
             padding-top: 40px;
+        }
         
-            span {
-                &.title {
-                    justify-content: flex-end;
-                }
+        .impression {
+            padding-top: 20px;
+        }
+        @media (min-width: 992px) {
+            .branding {
+                max-width: 60%;
             }
-            .site-footer-items {
+        }
+        a { color: white; }
+
+        .shortcut-items {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            @media (min-width: 992px) {
+                justify-content: space-between;
+                flex-direction: row;
+            }
+        }
+        ul {
+            &.social-media {
                 align-items: center;
                 display: flex;
-                flex-wrap: wrap;
-                padding-left: 15px;
-                padding-right: 15px;
-
-                .site-footer-brand {
-                    flex: 0 0 33.3333333333%;
-                    max-width: 33.3333333333%;
+                @media (min-width:992px) {
+                    padding-top: 20px;
                 }
-                .site-footer-shortcuts {
-                    justify-content: flex-end;
-                    flex-direction: row;
-                    flex: 0 0 66.6666666667%;
-                    max-width: 66.6666666667%;
-                    padding-top: 0;
-                    .shortcut {
-                        &:first-child {
-                            padding-left: 0;
+                li {
+                    padding-right: 40px;
+                    &:last-child { padding-right: 0; }
+                    a {
+                        color: white;
+                        transition: color .2s ease-in-out;
+                        &:hover { color: #333; } 
+                        i { font-size: 3.2rem; }
+                    }
+                }
+            }
+
+            &.shortcuts {   
+                padding-top: 20px;
+                @media (min-width:992px) {
+                    padding-top: 54px;
+                }
+                li {
+                    &:first-child {
+                        font-weight: 700;
+                        font-size: 1.9rem;
+                    }
+                    a {
+                        border-bottom: 0;
+                        color: white;
+                        text-decoration: none;
+                        transition: all .2s ease-in;
+                        &:hover {
+                            border-bottom: 1px solid white;
                         }
+                    }
+                }
+            }
+        }
+        
+        .info {
+            @media (min-width:992px) {
+                padding-top: 85px;
+            }
+        }
+        .copy {
+            background-color: rgb(130, 124, 120);                        
+            color: white;
+            padding-bottom: 20px;
+            padding-top: 20px; 
+
+            ul {
+                @media (min-width:992px) {
+                    align-items: center;
+                    display: flex;
+                    justify-content: flex-start;
+                }
+                li {
+                    @media (min-width:992px) {
+                        padding-right: 15px;
                         &:last-child {
                             padding-right: 0;
                         }
-                        text-align: right;
-                        padding-top: 0;
-                        padding-left: 15px;
-                        padding-right: 15px;
                     }
                 }
             }
-       }
-   }
-
-   .site-secondary-footer {
-       .site-copy {            
-            flex-direction: row;
-            justify-content: space-between;
-            .site-footer-navigation {
-                .menu {
-                    flex-direction: row;
-
-                    li {
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        
-                        &:first-child {
-                            padding-left: 0;
-                        }
-                    }
-                }
-            }           
-       }
-   }
+        }
+    }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-
+.whatsapp {
+    
+    display: inline-block;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 60px;
+    width: 60px;
+    z-index: 100;        
+    a { 
+        text-decoration: none;        
+        picture {            
+            display: block;     
+            width: fit-content;            
+        }
+    }
 }

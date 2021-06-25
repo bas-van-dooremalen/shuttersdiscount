@@ -1,0 +1,98 @@
+.site-selling-points {
+    .wrapper {
+        background-color:white;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        border-radius: 10px;        
+        margin-bottom: 40px;
+        padding: 40px 15px;        
+        @media (min-width: 992px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        ul {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            @media (min-width: 992px) {
+                flex-direction: row;
+            }
+            
+            li {
+                border-bottom: 1px solid #f8f9fa;
+                display: flex;
+                flex-direction: row;
+                @media (min-width: 992px) {
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+                font-size: 1.9rem; 
+                line-height: 1.2;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                width: 100%;
+                @media (min-width: 992px) {
+                    border-bottom: none;
+                    margin: 0;
+                    padding-bottom: 0;
+                    padding-right: 15px;
+                    width: 34%;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+                @media (min-width: 992px) {
+                    &:nth-child(2) {
+                        width: 36%;
+                    }
+                }
+                &:first-child {
+                    align-items: center;
+                    border-bottom: 0;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    font-family: $heading-font-family;
+                    font-size: $heading-default-font-size;                    
+                    font-weight: normal;                   
+                    line-height: 1;        
+                    padding-bottom: 25px;
+                    @media (min-width: 992px) {
+                        padding-bottom: 0;
+                    }
+                    padding-right: 0;      
+                    text-align: center;   
+                    
+                    .icon {              
+                        i {                        
+                            color: $kings-theme-color;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            padding-bottom: 5px;
+                            font-size: 1.4rem;
+
+                        }
+                    }
+                    span:last-child {
+                        font-family: $body-font-family;
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                    }
+                }                               
+                .icon {
+                    align-items: center;
+                    color: $kings-theme-color;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 0;
+                    padding-right: 15px;
+                    i {
+                        font-size: 2.6rem;
+                    }
+                }
+            }
+
+        }
+    }
+}

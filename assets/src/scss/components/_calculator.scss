@@ -1,0 +1,235 @@
+.message {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    a {
+        text-decoration: underline;
+    }
+    @media (min-width: 992px) {
+        display: none;
+    }
+
+}
+
+@media (min-width: 992px) {
+    body {
+        &.page-template-page-pricecalculator {
+            .gallery-widget {
+                display: none;
+            }            
+        }
+    }    
+}
+.calculator {
+    display: none;
+    @media (min-width: 992px) {
+        display: inline-block;
+    } 
+    background-color: white;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 5;
+    hr {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid lighten($secondary-theme-color,70%);                
+        overflow: visible;
+        height: 15px;
+        margin: 20px auto; 
+        margin-bottom: 25px;                               
+        position: relative;
+        width: 100%;
+        &::before {
+            content: '';
+            background-color: lighten($secondary-theme-color,70%);
+            display: flex;
+            border-radius: 100px;
+            height: 10px;
+            margin: auto;
+            top: 10px;
+            left: 0;
+            right: 0;
+            width: 10px;
+            position: absolute;
+        }
+    }    
+    p { line-height: 1.2; }
+    .packages {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        @media (min-width:768px) {
+            flex-direction: row;
+        }
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        justify-content: space-between;        
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+        label {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            padding-bottom: 1.5rem;
+            @media (min-width:768px) {
+                padding-right: 1.5rem;
+            }
+
+            input {
+                &[type="radio"] { margin: 0; }
+            }
+            
+            .package {
+                align-items: baseline;
+                display: flex;
+                flex-direction: column;
+                padding-left: 1rem;
+                span {
+                    line-height: 1.2;
+                    &:first-child {  font-weight: 600; }
+                }
+            }
+        }        
+    }
+
+    @keyframes come-in {
+        to { transform: translateY(0); }
+    }
+
+    .measure {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+        &.show {
+            height: fit-content;
+            transform: translateY(-100px);
+            animation: come-in 0.2s ease forwards;
+        }
+        .m-head {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media(min-width: 510px) {
+                flex-direction: row;
+            }
+        }
+
+        #error {
+            background-color: #fa1616;
+            border-radius: 	.4rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            @media (min-width:510px) {
+                margin-bottom: 0;
+            }
+            padding: .5rem;
+            opacity: 0;                        
+            line-height: 1;
+            transition: all .2s ease-in;
+            &.show {
+                opacity: 1;
+            }
+        }
+        table {           
+            width: 100%;
+            .tablerow:not(:first-child) td { padding-top: 1.5rem; }
+            label { 
+                line-height: 1;
+                opacity: .7; 
+            }
+            .tablerow {
+                display: flex;
+                flex-direction: column;
+                @media (min-width:786px) {
+                    flex-direction: row;
+                    td {
+                        width: 100%;
+                    }
+                }
+            }
+            .form-control {
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                border-radius: 0;
+                outline: none;
+                &:focus {
+                    box-shadow: none;
+                    border-bottom: 1px solid $secondary-theme-color;
+                }  
+            }
+        }
+        .options {
+            align-items: center;
+            display: flex;
+            flex-direction: column-reverse;
+            @media (min-width:510px) {
+                flex-direction: row;
+            }
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            
+            button {
+                &:first-child {
+                    background-color: $primary-theme-color;
+                    font-weight: 600;                    
+                }
+                background-color: #e0e0e0;
+                border-radius: .4rem;
+                display: flex;
+                margin-bottom: 1.5rem;
+                @media (min-width:510px) {
+                    margin-bottom: 0;
+                }
+                padding: 1.2rem 2.4rem;
+                border: none;
+                cursor: pointer;
+                transition: all .2s ease-in;
+                
+                i { margin: 0 .5rem; }
+
+                &:hover {
+                    background-color: #b8b8b8;
+                }
+            }
+        }
+    }
+}
+
+.totalprice {
+    border-radius: 1.5rem;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;   
+    h3 {
+        color: #00b900;
+        font-size: 1.6rem;
+        margin-bottom: 0;
+    }
+    table {       
+        th { text-align: left; }
+        td { border-bottom: 1px solid #ced4da;           }
+    }     
+    @media (min-width:992px) {
+        max-width: 960px;        
+    }
+    @media (min-width:1200px) {
+        max-width: 1140px;
+    }
+}
+
+#result-table {
+    tr {
+        &:first-child {
+            background-color: $primary-theme-color;
+            color: white;
+        }
+        background-color: #e4e4e4;
+    }
+}

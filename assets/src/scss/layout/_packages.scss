@@ -1,0 +1,285 @@
+.site-products {    
+    &.products {
+        padding-top: 0;
+        text-align: left;      
+        position: relative;  
+        .content {
+            padding-bottom: 1.5rem;
+        }     
+        article {
+            &.product-hot {
+                position: relative;
+                z-index: 1;
+                &::before {
+                    background-color: #e4e4e4;
+                    border-radius: 0 80px 0; 
+                    display: none;
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    transform: rotate(5deg);
+                    width: 350px;
+                    height: 300px;
+                    z-index: -1;
+                }
+                div {
+                    &.label {
+                        align-items: center;
+                        background-color: rgb(0, 86, 154);
+                        border-radius: .4rem;                  
+                        color: white;                              
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        font-size: 1.4rem;
+                        padding: 1.5rem 1rem;
+                        position: absolute;
+                        line-height: 1;
+                        transform: rotate(-5deg);
+                        text-transform: lowercase;                        
+                        z-index: 5;    
+                        text-align: center;
+                        
+                        i {
+                            color:white;    
+                            margin: 2.5px 2.5px;           
+                        }                   
+                   }
+               }
+           }
+        }
+    }
+ 
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 2rem;
+        
+        &.product-layout-banner {
+            justify-content: flex-start;
+            .product-header {
+                align-items: center;
+                background-color: #ECE5DD;
+                border: 6px double #8e877f;
+                border-radius: 0 80px 0;                
+                display: flex;
+                justify-content: center;
+                height: 300px;
+                text-align: center;
+                width: 100%;
+                margin-top: 2rem;              
+
+                .product-banner-content {                                        
+                    font-size: 1.4rem;
+                    i {
+                        color: black;
+                        font-size: 2rem;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        position: relative;
+                        top: 15px;                        
+                        text-align: center;
+                        &:first-child { margin-left: 0; }
+                        &:last-child { margin-right: 0; }
+                    }
+                    h2 {                        
+                        font-size: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                }                
+            }    
+            
+            .product-sign {
+                a {
+                    align-items: center;
+                    background-color: #075E54;                  
+                    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .20);
+                    color: white;                
+                    border-radius: .4rem;
+                    display: flex;
+                    justify-content: center; 
+                    font-weight: 600;
+                    margin: auto;
+                    width: fit-content;                                   
+                    padding: 1.2rem 2.4rem;                    
+                    position: relative;
+                    transition: background-color .2s ease-in;
+                    
+                    &:hover {
+                        background-color: #128C7E;
+                    }
+
+                    i {
+                        color: white;
+                        font-size: 3.0rem;
+                        padding-left: 1.5rem;
+                    }
+                }
+            }        
+        }
+
+        &:hover {
+            header {
+                img {
+                    transform: scale(1.03);
+                }
+            }
+        }
+        header {   
+            padding-top: 2rem;                     
+            position: relative;
+            
+            img {
+                @extend .img-fluid;
+                transition: all .3s ease;
+                width: 100%;
+            }
+        }
+        .product-title {
+            position: absolute;
+            background-color: #fff;
+            display: flex;         
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 1.2rem 2.4rem;            
+            line-height: 1;
+            bottom: 35px;
+            max-width: fit-content;
+            border-radius: 0 20px 20px 0;           
+            h2 {                    
+                font-size: 1.8rem;
+                font-family: $secondary-theme-font;
+                color: $secondary-theme-color;
+            }
+            span {
+                color: #696969;
+                font-size: 1.4rem;
+                text-transform: lowercase;                    
+            }
+        }
+        .product-description {
+            color: #696969;
+            font-family: $primary-theme-font;
+            font-size: 1.4rem;
+            padding: 1.2rem 1.6rem; 
+            
+            p { 
+                height: fit-content; 
+            }
+            
+        }
+        .product-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        picture {
+            border-radius: 0 90px 0 90px;
+            display: flex;
+            overflow: hidden;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+ 
+@media (min-width: 576px) {
+    .site-products {
+        &.products {
+            article {
+                &.product-hot {
+                    div {
+                        &.label {
+                            left: -35px;
+                            top: 5px;
+                            transform: rotate(-20deg);                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .site-products {
+        position: relative;
+
+        &.products {
+            padding-top: 2rem;
+
+            article { padding-bottom: 6rem; }
+        }
+
+        .col-products {
+            position: relative;
+            .content {
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        article {            
+            &.product-layout-banner {
+                position: relative;               
+
+                .product-header {                    
+                    .product-banner-content {
+                        padding-left: 4rem;
+                        padding-right: 4rem;
+                    }
+                }
+            }
+
+            .product-description { text-align: center; }
+            a { text-decoration: none; }
+
+            footer {
+                &.product-footer {                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+        }        
+        .products { padding-top: 4rem; }
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-products {
+        &.products {
+            article {
+                padding-bottom: 2rem;
+                &.product-hot {
+                    &::before {
+                        display: flex;
+                    }
+                }
+            }
+        }
+        .col-products {         
+            &::before {
+                font-weight: 800;
+                font-family: $secondary-theme-font;
+                color: black;
+                font-size: 4rem;
+                text-transform: uppercase;
+                align-items: center;
+                display: flex;
+                opacity: .07;
+                top: 60%;
+                left: -230px;
+                content: '100% Pasgarantie';
+                position: absolute;
+                transform: rotate(-90deg);
+                z-index: 1;
+            }
+        }
+    }
+}

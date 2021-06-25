@@ -1,38 +1,40 @@
-
-// dependencies
-@import "node_modules/breakpoint-sass/stylesheets/breakpoint",
-		"node_modules/breakpoint-slicer/stylesheets/breakpoint-slicer";
-
-// abstracts
 @import "abstracts/variables";
 
-// vendors
-// @import "node_modules/bootstrap/scss/bootstrap";
- 
-// vendors overrides
 @import "vendors/bootstrap/bootstrap",
         "vendors/fancybox/fancybox",
         "vendors/fontawesome/fontawesome",
         "vendors/fontawesome/brands",
         "vendors/fontawesome/regular",
         "vendors/fontawesome/solid",
-        "vendors/hamburgers/hamburgers";  
+        "vendors/hamburgers/hamburgers",
+        "vendors/owlcarousel/owl.carousel",
+        "vendors/owlcarousel/owl.theme.default",
+        "vendors/owlcarousel/owl.theme.green",
+        "vendors/tinyslider/tiny-slider";  
 
-// base
 @import "base/fonts",
         "base/base";
 
-// layout
-@import "layout/header",
+@import "layout/customers",
+        "layout/contact-widget",
+        "layout/deals",
+        "layout/header",
         "layout/footer",
         "layout/forms",
-        "layout/grid";
+        "layout/locations",
+        "layout/packages",
+        "layout/upperbar",
+        "layout/sidebar",
+        "layout/sellingpoints";
 
-// components
 @import "components/buttons",
-        "components/forms",
-        "components/modal";
+        "components/calculator",
+        "components/widget",        
+        "components/modal",
+        "components/sticky",
+        "components/tabs",
+        "components/tns";
 
-// pages
 @import "pages/front-page",
+        "pages/quotation-page",
         "pages/page";

@@ -1,41 +1,38 @@
-/* --------------------------------------------------------------------
- * Header
- * ----------------------------------------------------------------- */
 .site-header {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     padding: 0 15px;
-    position: absolute;
     width: 100%;
     z-index: 5;
     .site-branding {         
         position: relative;
         padding-top: 15px;
-        z-index: 10;           
+        z-index: 25;           
     }
-
-    @media (max-width: 1023px) {
+    
+    @media (max-width: 1023px) {       
         .site-navigation {
             background: white;
             border-bottom-right-radius: 10rem;
             box-shadow: 0 0.2rem 2.3rem 0 rgba(30, 30, 30, .5);
-            font-size: 1.9rem;
+            font-size: 1.8rem;
             position: fixed;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            height: 98%;
+            height: 95%;
             width: 100%;
             transition: transform .4s cubic-bezier(.42,0,.18,.99);
             overflow-y: auto;
             opacity: 0;
-            padding-top: 140px;
+            padding-bottom: 40px;
+            padding-top: 190px;
             will-change: transform;
             transform: translate3d(0,-100%,0);        
-            z-index: 1;
+            z-index: 20;
             ul {
                 line-height: 2;
                 padding: 0 15px;
@@ -87,68 +84,31 @@
 
 @keyframes menu-column-transition-opening {
     0% {
-        opacity: 0;
-        -webkit-transform: translateY(100px);
+        opacity: 0;    
         transform: translateY(100px)
     }
 
     100% {
-        -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 1
     }
 }
 
-
-/* --------------------------------------------------------------------
- * Variables: MediaQueries
- * ----------------------------------------------------------------- */
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 992px) {    
     .site-header {
-        max-width: 540px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-    }
-
-    .site-navigation {
-        .menu {
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;            
-        }
-    }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    .site-header {
-        max-width: 720px;
-        .site-navigation {
-            .menu {
-                max-width: 720px;
-                margin-left: auto;
-                margin-right: auto;            
-            }
-        }
-    }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    .site-header {
+        margin: auto;
         max-width: 960px;
+        position: relative;
+      
         .site-navigation {
             .menu {
                 max-width: 960px;
                 margin-left: auto;
                 margin-right: auto;            
             }
+        }
+        .site-social-media {
+            display: none;
         }
     }
 }
@@ -159,7 +119,9 @@
         background-color: transparent;
         justify-content: flex-start;
         max-width: 992px;
+     
         .site-branding {
+            padding-left: 7px;
             padding-right: 15px;
         }
     }
@@ -169,14 +131,10 @@
             width: 100%;
             ul {
                 display: flex;
-                li {
-                    padding-left: 15px;
+                li {                    
                     padding-right: 15px;
-                    &:nth-child(4) { margin-left: auto; }
                     &.current_page_item  {
-                        a {
-                            border-color: $secondary-theme-color;
-                        }
+                        a { border-color: $primary-theme-color; }
                     }
                 }
             }
@@ -185,16 +143,24 @@
                 text-decoration: none;
                 transition: all .1s ease-in-out;
                 &:hover {
-                    border-color: $secondary-theme-color;                    
+                    border-color: $primary-theme-color;                    
                 }
             }
         }
     }
 }
 
-// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .site-header {
-        max-width: 1140px;
+        max-width: 1140px;       
+    }
+    nav {
+        &.site-navigation {
+            ul {
+                li {
+                    padding-left: 15px;
+                }
+            }
+        }
     }
 }

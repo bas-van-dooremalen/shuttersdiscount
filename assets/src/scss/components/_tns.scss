@@ -1,0 +1,55 @@
+.gallery-widget {
+    position: relative;
+    overflow: hidden;
+    .controls {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        bottom: 8px;
+        left: 0;
+        position: absolute;
+        li {
+            align-items: center;
+            background-color: rgba($primary-theme-color,.9);
+            color: black;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            width: 60px;
+            transition: all .2s ease-in;
+            &:hover { background-color: rgba($primary-theme-color,.7); }
+            &:first-child { margin-right: 1px; }
+            i { font-size: 2.4rem; }
+        }
+    }
+    #tns1-iw {
+        .tns-slider {
+            .tns-item  {
+                padding-right: 0;
+            }        
+        }
+    }
+}
+
+.slider {    
+    picture {      
+        display: flex;        
+        height: 100%;
+        overflow: hidden;
+        width: 100%;        
+        
+        img {                   
+            border-radius: 100px 0 100px 0; 
+            height: 50%;
+            object-fit: contain;
+            
+            @media (min-width: 992px) {
+                height: 100%;
+                object-fit: cover;                
+            }
+            width: 100%;
+        }
+    }
+}
+

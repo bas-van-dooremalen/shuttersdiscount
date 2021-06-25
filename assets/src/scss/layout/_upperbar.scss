@@ -1,0 +1,82 @@
+.site-upperbar {
+    background-color: $primary-theme-color;     
+    position: relative;
+    z-index: 25;    
+    ul {
+        align-items: center;
+        display: flex;            
+        justify-content: space-between;
+        @media (min-width: 992px) {
+            justify-content: flex-start;
+        }
+        margin: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        @media (min-width: 992px) {
+            max-width: 960px;
+        }
+        @media (min-width: 1200px) {
+            max-width: 1140px;
+        }
+        li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            @media (min-width: 800px) {
+                padding-right: 5px;
+            }
+            width: fit-content;
+            &:first-child {
+                @media (min-width: 992px) {
+                    padding-right: 15px;
+                }
+                span {
+                    &:last-child { 
+                        display: none;
+                        @media (min-width: 375px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                span {
+                    &:last-child { 
+                        display: none;
+                        @media (min-width: 375px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+                display: none;
+                @media (min-width: 800px) {
+                    display: inline-block;
+                }
+                margin-left: auto;
+            }
+            &:last-child {
+                display: none;
+                @media (min-width: 800px) {
+                    display: inline-block;
+                }
+                padding-right: 0;
+            }
+            a {
+                align-items: center;
+                color: white;
+                display: flex;            
+                text-decoration: none;
+                transition: color .2s ease-in-out;
+                &:hover {
+                    color: $secondary-theme-color;
+                }
+
+                .icon {
+                    display: flex;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}

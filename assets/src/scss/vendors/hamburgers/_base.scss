@@ -2,14 +2,14 @@
 // ==================================================
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
-
-  // Normalize (<button>)
   font: inherit;
   color: inherit;
   text-transform: none;
@@ -19,7 +19,13 @@
   margin-left: auto;
   overflow: visible;
   z-index: 100;
-
+  position: relative;
+  &::after {
+    font-size: 1.4rem;
+    content: 'MENU';
+    font-weight: 700;
+    color: $secondary-theme-color;
+  }
   &:hover {
     @if $hamburger-hover-use-filter == true {
       filter: $hamburger-hover-filter;
@@ -30,6 +36,10 @@
   }
 
   &.is-active {
+    &::after {
+      content: '';
+  
+    }
     &:hover {
       @if $hamburger-hover-use-filter == true {
         filter: $hamburger-active-hover-filter;
@@ -75,11 +85,12 @@
   &::before,
   &::after {
     content: "";
-    display: block;
+    display: block;    
   }
 
   &::before {
     top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    width: 25px;
   }
 
   &::after {

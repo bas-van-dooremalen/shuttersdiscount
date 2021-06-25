@@ -1,0 +1,102 @@
+.site-widget {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    @media (min-width:992px) {
+        margin-bottom: 4rem;
+    }
+
+    .row {
+        align-items: center;
+    }
+  
+    .image {
+        picture {
+            img { 
+                @extend .img-fluid;
+                border-radius: 100px 0 100px 0; 
+                box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .45);                
+            }
+        }
+    }
+
+    .gallery-widget {
+        .controls {
+            display: none;
+        }
+    }
+
+    .slider {
+        padding-bottom: 2.5rem;
+        
+        @media (min-width:992px) {
+            padding-bottom: 0;
+        }
+
+        picture {
+            img { 
+                border-radius: 30px 0 30px 0; 
+                @media (min-width: 992px) {
+                    border-radius: 100px 0 100px 0; 
+                }
+            }
+        }
+    }
+    .content {          
+        ul {
+            padding-bottom: 2rem;
+            li {
+                line-height: 2;
+                padding-left: 2rem;
+                position: relative;
+                &:last-child {
+                    font-weight: 600;
+                }
+                &::before {
+                    display: inline-block;
+                    content: "";
+                    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z'/></svg>");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    filter: invert(0%) sepia(17%) saturate(13%) hue-rotate(32deg) brightness(101%) contrast(100%);                
+                    position: absolute;
+                    left: -1rem;                
+                    height: 30px;
+                    width: 30px;
+                }
+                
+            }
+        }
+    }
+    .widget {        
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        p { color: $secondary-theme-color; }
+        
+        .widget-style {
+            background-color: $primary-theme-color;
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .15);
+            border-radius: 30px;
+            background-color: #fff;
+            color: white;
+            padding: 2.5rem;        
+            
+            @media (min-width: 992px) {
+                border-radius: 30px 0 0 30px;
+                margin-left: -8rem;
+                margin-top: 2vh;
+                padding: 2.5rem 4rem;
+            } 
+            .wpcf7 {
+                color: $secondary-theme-color;
+                .form-group {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }    
+    
+}

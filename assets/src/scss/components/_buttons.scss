@@ -1,6 +1,3 @@
-/* --------------------------------------------------------------------
- * Buttons
- * ----------------------------------------------------------------- */
 .btn {
     align-content: center;
     display: flex;
@@ -14,7 +11,10 @@
     border-radius: .4rem;
     will-change: background;
     text-decoration: none;
-    
+    i { 
+        font-size: 2rem;
+        margin-left: 1.5rem; 
+    }
     &.btn-center {
         margin-left: auto;
         margin-right: auto;
@@ -28,19 +28,21 @@
         border: .2rem solid $primary-theme-color;
         
         &:hover {
-            color: $primary-theme-color;   
-            background-color: transparent;
+            color: white;   
+            background-color: black;
+            border-color: black;
         }
     }
 
     &.btn-secondary {
-        color: $secondary-theme-color;
-        background-color: white;
-        border: .2rem solid $secondary-theme-color;
+        color: white;
+        background-color: $kings-theme-color;
+        border: .2rem solid $kings-theme-color;
         
         &:hover {
-            color: white;   
-            background-color: $secondary-theme-color;
+            color: $secondary-theme-color;   
+            background-color: #c1c1c1;
+            border-color: #c1c1c1;
         }        
     }
     
@@ -50,7 +52,14 @@
         border: .2rem solid black;
         box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .20);
         font-family: $secondary-theme-font;
-
+        &.btn-y {
+            background-color: $primary-theme-color;
+            border-color: $primary-theme-color;
+            color: $secondary-theme-color;         
+            &:hover {
+                border-color: $secondary-theme-color;
+            }   
+        }
         &:hover {
             color: black;   
             background-color: white;
@@ -58,34 +67,11 @@
     }
 }
 
- /* --------------------------------------------------------------------
- * Variables: MediaQueries
- * ----------------------------------------------------------------- */
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
- 
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  
-}
-
-// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .btn {
-        margin-bottom: 0;
+    .btn {        
         &.btn-center {
             margin-bottom: 40px;
             margin-top: 40px;
         }
     }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-
 }

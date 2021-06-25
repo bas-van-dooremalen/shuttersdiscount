@@ -1,37 +1,39 @@
-/* --------------------------------------------------------------------
- * Page
- * ----------------------------------------------------------------- */
-.block {
-    background: white;
-    box-shadow: 0 0.2rem 2.3rem 0 rgba(30, 30, 30, .5);    
-    padding: 2rem;
+
+.site-page {
+    padding-bottom: 2rem;
+    padding-top: 2rem;  
 }
 
-/* --------------------------------------------------------------------
- * Variables: MediaQueries
- * ----------------------------------------------------------------- */
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
+.site-page-cta {    
+    padding-bottom: 4rem;
+    padding-top: 8rem;
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
- 
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    .block {        
-        padding: 4rem;
-        width: 45%;
+    .cta-content {
+        background-color:#9b8f7b;
+        border-radius: 0 4rem 0 4rem;
+        color: white;
+        padding: 2rem;
+        h3 { color: white; }
+        &.cta-content-secondary {
+            background-color:  $primary-theme-color;            
+        }
     }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+.site-content-extra {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
 
+@media (min-width: 992px) {
+     .site-page-cta {
+        .cta-content {
+            border-radius: 0 90px 0 90px;
+            padding: 8rem;
+            &.cta-content-secondary {
+                margin-left: -8rem;
+                margin-top: -4rem;
+            }
+        }
+    }    
 }
