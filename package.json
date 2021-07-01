@@ -19,6 +19,15 @@
     "build": "gulp build",
     "postinstall": "gulp build && echo \"THEME INSTALLED, GOOD TO GO !\""
   },
+  "rules": {
+    "linebreak-style": 0,
+    "global-require": 0,
+    "eslint linebreak-style": [
+      0,
+      "error",
+      "windows"
+    ]
+  },
   "engines": {
     "node": ">=12.0.0"
   },
@@ -34,7 +43,7 @@
     "browser-sync": "2.26.14",
     "cssnano": "5.0.6",
     "del": "6.0.0",
-    "eslint": "7.28.0",
+    "eslint": "^7.28.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-plugin-babel": "5.3.1",
     "eslint-plugin-import": "2.23.4",
@@ -55,6 +64,7 @@
     "gulp-sourcemaps": "3.0.0",
     "gulp-svg-sprite": "1.5.0",
     "gulp-svgmin": "3.0.0",
+    "gulp-uglify": "^3.0.2",
     "lodash": "4.17.21",
     "map-stream": "0.0.7",
     "merge-stream": "2.0.0",

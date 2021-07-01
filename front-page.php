@@ -138,24 +138,109 @@
 		<div class="row">
 			<div class="col-sm-12 col-lg-8 mx-auto txt-center">
 				<h4>Onze klanten over Shutterdiscount.nl</h4>
-				<p>Wij delen graag de ervaringen van onze huidige klanten</p>
+				<p>Wij delen graag de ervaringen van onze huidige klanten</p>								
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-lg-4">
+				<div class="review">
 					
-				<div class="testimonials">
-					<div class="owl-carousel owl-theme">
-						<div class="testimonial">
-							<span class="fullname">Jesper van Bladel</span>
-							<span class="rating"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span>
-							<p class="review">Vakkundig en gespecialiseerd bedrijf. Ik geniet nu al een aantal maanden van mijn nieuwe shutters. Bedankt voor het mooie werk!</p>
+					<div class="review-picture">
+						<div class="review-user">							
+							<span>Merel De Klerk</span>
+							<span><i class="bi bi-star-fill"></i></span>
 						</div>
-						<div class="testimonial">
-							<span class="fullname">Jos Smit</span>
-							<span class="rating"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i></span>
-							<p class="review">Fijne medewerking en perfecte shutters bij mij thuis geïnstalleerd. Na het kiezen van Shutters Discount voor onze shutters is het proces zeer snel verlopen. We werden goed begeleid door de vakmensen daar en werden telkens op de hoogte gehouden van het verloop. Toppers, bedankt!</p>
+						<img src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.6435-0/s600x600/165508100_1152950275143654_2064542276708932024_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=KiFSaKeeDLMAX_vcPIX&_nc_ht=scontent-ams4-1.xx&tp=7&oh=72144c4c9f343e5cef5d136ef582e1f1&oe=60DF98EA" alt="">
+					</div>
+					
+					<div class="review-post">
+						Toppers zijn het bij ShuttersDiscount!
+						Super vriendelijke mensen. Doen wat zij beloven.
+						Top kwaliteit voor een redelijke prijs. Perfecte levering en montage!
+						Bedankt Roger, Wendy en Arno
+					</div>
+				</div>			
+			</div>
+
+			<div class="col-sm-12 col-lg-4">
+				<div class="review">
+					<div class="review-picture">
+						<div class="review-user">
+							<span>Hélène van der Zandt</span>
+							<span><i class="bi bi-star-fill"></i></span>
 						</div>
+						<img src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.6435-0/s600x600/123504756_3177318072378812_4406309716480626386_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=Bow4SDiapo0AX8k1iWU&_nc_ht=scontent-amt2-1.xx&tp=7&oh=d6c6e695690a48e42286d873bf25f8d2&oe=60DFFE16" alt="">
+					</div>
+					
+					<div class="review-post">
+						Top service, goed advies vooraf en goede kwaliteit en montage!
+						Zeer blij met mijn shutters!
 					</div>
 				</div>
-					
 			</div>
+			
+			<div class="col-sm-12 col-lg-4">
+				<div class="review">
+					<div class="review-banner">
+						Meer reviews en inspiratie <br/> vind je op onze <br/>Social media kanalen.
+						<ul class="social"> 
+							<li class="social-item">
+								<a href="https://www.facebook.com/ShuttersDiscount/" class="social social-fb">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li class="social-item">										
+								<a href="https://www.instagram.com/shuttersdiscount/" class="social social-insta">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li class="social-item">										
+								<a href="https://www.instagram.com/shuttersdiscount/" class="social social-yt">
+									<i class="fab fa-youtube"></i>
+								</a>
+							</li>
+							<li class="social-item">										
+								<a href="https://www.instagram.com/shuttersdiscount/" class="social social-yt">
+									<i class="fab fa-pinterest-p"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="review-social">
+						Shutters inspiratie op doen of andere <br/> ervaringen lezen?						
+						Volg Shuttersdiscount.nl op Facebook, Instagram, Youtube of Pinterest.
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="site-highlighted">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-sm-12 col-lg-8 mx-auto txt-center">
+				<h5>Blackwalnut maatwerk shutters.</h5>
+				<p>Shutters, in welke kleur dan ook zijn een geweldige manier om je privacy te bewaren terwijl je door het kantelen van de shutters lamellen je toch daglicht naar binnen kunt laten komen. Het spelen met licht en schaduw geeft een fantastisch effect aan je interieur.</p>
+			</div>
+			<?php  $images = get_field('highlighted_shutters');
+			if( $images ): ?>
+			<div class="col-sm-12">
+				<ul class="row">
+					<?php foreach( $images as $image ): ?>
+						<li class="col-sm-4">
+							<a href="<?php echo esc_url($image['url']); ?>">
+								<img src="<?php echo esc_url($image['sizes']['highlighted']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img-fluid" />
+							</a>
+							<p><?php echo esc_html($image['caption']); ?></p>
+						</li>
+					<?php endforeach; ?>
+				</ul>				
+				<a href="<?php echo get_site_url();?>/zwarte-shutters" class="btn btn-primary mx-auto">Meer ontdekken over zwarte shutters?</a>
+			</div>		
+			<?php endif; ?>	
 		</div>
 	</div>
 </div>

@@ -30,6 +30,7 @@ function custom_setup() {
 
 	// CUSTOM IMAGE SIZES
 	add_image_size( 'deals', 640, 480, true );
+	add_image_size( 'highlighted', 700, 600, true );
 }
 add_action('after_setup_theme', 'custom_setup');
 
