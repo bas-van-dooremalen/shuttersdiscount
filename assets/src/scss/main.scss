@@ -1,16 +1,7 @@
 @import "abstracts/variables";
 
-@import "vendors/bootstrap/bootstrap",
-        "vendors/fancybox/fancybox",
-        "vendors/fontawesome/fontawesome",
-        "vendors/fontawesome/brands",
-        "vendors/fontawesome/regular",
-        "vendors/fontawesome/solid",
-        "vendors/hamburgers/hamburgers",
-        "vendors/owlcarousel/owl.carousel",
-        "vendors/owlcarousel/owl.theme.default",
-        "vendors/owlcarousel/owl.theme.green",
-        "vendors/tinyslider/tiny-slider";  
+@import "vendors/bootstrap-5.0.2/bootstrap",
+        "vendors/hamburgers/hamburgers";
 
 @import "base/fonts",
         "base/base";
@@ -31,10 +22,10 @@
 @import "components/buttons",
         "components/calculator",
         "components/widget",        
-        "components/modal",
-        "components/sticky",
-        "components/tabs",
-        "components/tns";
+        //"components/modal",
+        //"components/sticky",
+        "components/tabs";
+        //"components/tns";
 
 @import "pages/front-page",
         "pages/quotation-page",

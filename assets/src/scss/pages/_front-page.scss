@@ -1,51 +1,22 @@
- .site-intro {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-    position: relative;  
-    @media (min-width: 992px) {
-        flex-direction: row;
+ .site-intro {    
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;        
     }
-    
-    .content { 
-        z-index: 2; 
-        @media (min-width: 992px) {
-            position: absolute;
-            width: 43%;           
-            padding-left: 0; 
-            padding-right: 20px;
-            padding-bottom: 25px;
-        }
-    }        
-    .visual {       
-        padding-bottom: 4rem;
-        position: relative;
-        z-index: 1;
-        picture {   
-            display: flex;  
-            position: relative;
-            background-blend-mode: multiply;
-            
-            img {
-                @extend .img-fluid;
-                border-radius: 100px 0 100px 0;            
-                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-                height: auto;                
-                margin-left: auto;
-                margin-right: auto;
-                @media (min-width:992px) {
-                    margin-left: 77%;
-                    width: 80%;
-                }
-                @media (min-width:1200px) {
-                    margin-left: 92%;
-                    width: 95%;
-                }
+    .image {       
+        text-align: right;
+        img {
+            @extend .img-fluid;
+            border-radius: 30px 0 30px 0;
+            box-shadow: #26394d 0px 20px 30px -10px;
+            @media (min-width: 992px ) {
+                border-radius: 100px 0 100px 0;
             }
-        }        
+        }
     }
     
     .buttons {

@@ -19,9 +19,52 @@
 
             &.deal{
                 display: flex;
+                flex-direction: column;
                 margin-bottom: 1.5em;
                 text-decoration: none;
-               
+                position: relative;
+
+                &.hot {
+                    margin-top: -39px;
+                    .label-hot {
+                        align-items: center;
+                        background-color: $kings-theme-color;
+                        color: white;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 1.4rem;
+                        justify-content: center;                        
+                        line-height: 1;
+                        margin: auto;                        
+                        padding: 5px 15px;
+                        position: relative;
+                        text-transform: uppercase;
+                        top: 25px;
+                        width: fit-content;
+                        z-index: 1;
+                        &:before {
+                            left: -10px;
+                            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+                            position: absolute;
+                            content: '';
+                            height: 39%;
+                            width: 10px;
+                            background-color: $kings-theme-color;
+                            top: 0;
+                        }
+                        &:after {
+                            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+                            position: absolute;
+                            content: '';
+                            height: 39%;
+                            width: 10px;
+                            background-color: $kings-theme-color;
+                            top: 0;
+                            right: -10px;
+                        }
+                    }
+                }
+
                 &:hover {
                     .description:not(.short) {
                         background-color: white;
@@ -41,16 +84,15 @@
                 .body {
                     display: flex;
                     flex-direction: column;
+                    position: relative;
                     .item {
                         align-items: center;
-                        bottom: 17vh;
-                        @media (min-width: 992px) {
-                            bottom: 13vh;
-                        }
+                        bottom: 30px;
                         display: flex;
                         justify-content: space-between;
-                        width: calc(100% - 65px);
+                        padding-right: 15px;
                         position: absolute;
+                        width: 100%;
 
                         .wrap {
                             background-color: white;
@@ -62,7 +104,6 @@
                             h3 {
                                 color: $kings-theme-color;
                                 font-size: 1.7rem;
-                                text-transform: lowercase;
                                 margin: 0;
                             }
 
@@ -83,9 +124,8 @@
                             height: 35px;
                             width: 35px;
                             z-index: 1;
-                            i {
-                                color:white;
-                                font-size: 2.5rem;
+                            svg {
+                                fill:white;
                             }                 
                         }
                     }
