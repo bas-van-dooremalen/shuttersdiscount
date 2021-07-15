@@ -18,7 +18,7 @@
 <div class="site-contact">
 	<div class="container">
 		<div class="row no-gutters">
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-6 px-4">
 				<div class="contact-details">
 					<ul class="contact-address">
 						<li>Contactgegevens</li>
@@ -47,7 +47,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-6 px-4">
 				<div class="contact-form">
 					<h2>Shutters advies</h2>
 					<p>

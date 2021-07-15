@@ -1,4 +1,4 @@
-.site-customers {    
+.site-reviews {    
     padding-top: 1em;
     padding-bottom: 1em;   
     @media (min-width: 768px) {   
@@ -11,55 +11,25 @@
     .btn { margin: auto; }
 
     .review {
+        align-items: center;
         display: flex;
+        justify-content: space-between;        
         flex-direction: column;
-        margin-top: 1.5em;
+        padding-top: 1.5em;
         
         .review-banner {
             align-items: center;
-            background-color: $kings-theme-color;
+            background-color: $primary-theme-color;
             border-radius: 0 40px 0 40px;            
-            color: white;
-            display: flex; 
-            justify-content: space-around;            
-            flex-direction: column;
+            color: white;            
+            display: flex;
+            justify-content: center;   
+            flex-direction: column;               
             font-family: $secondary-theme-font;
             font-size: 2.1rem;
-            height: 265px;
-            line-height: 1.6;
+            height: 305px;            
             text-align: center;
             width: 100%;
-
-            .social {
-                align-items: center;
-                display: flex;
-                justify-content: center;                
-                margin-bottom: .3em;
-
-                li {
-                    padding-left: .5em;
-                    padding-right: .5em;
-                    a {
-                        align-items: center;
-                        background-color: white;
-                        border-radius: 0 15px 0 15px;   
-                        color: $secondary-theme-color;                        
-                        display: flex;
-                        justify-content: center;                        
-                        height: 45px;
-                        width: 45px;
-                        text-decoration: none;
-                        transition: all .2s ease-in-out;
-                        i {
-                            font-size: 2.6rem;
-                        }
-                        &:hover {
-                            background-color: $primary-theme-color;
-                            color: white;
-                        }
-                    }
-                }
-            }
         }
         .review-social {
             padding-top: 1em;
@@ -69,14 +39,16 @@
             bottom: 60px;
             display: flex;
             justify-content: space-between;                        
-            width: calc(100% - 1.5em);
+            width: calc(100% - 15px);
             position: absolute;
             
             span {
                 &:first-child {
                     background-color: white;
                     border-radius: 0 50px 50px 0;
-                    font-weight: bold;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;                     
                     padding: 10px 25px 10px 5px;
                 }
                 &:last-child { 
@@ -86,8 +58,8 @@
                     color: white;
                     display: flex;
                     justify-content: center;
-                    height: 50px;
-                    width: 50px;
+                    height: 35px;
+                    width: 35px;
                 }
             }
             img {
@@ -99,11 +71,11 @@
             padding-bottom: 1em;            
             position: relative;
             
-            img {
-                @extend .img-fluid;                
+            img {                
                 border-radius: 0 40px 0 40px;
                 object-fit: cover;                
-                min-height: 265px;
+                min-height: 305px;
+                width: 100%;             
             }
         }
     }

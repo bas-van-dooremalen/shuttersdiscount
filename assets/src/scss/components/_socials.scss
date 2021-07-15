@@ -1,0 +1,30 @@
+.social {
+    align-items: center;
+    display: flex;
+    justify-content: center;                
+    padding-top: 15px;
+
+    li {
+        padding-left: .5em;
+        padding-right: .5em;
+        a {
+            align-items: center;
+            background-color: white;
+            border-radius: 0 15px 0 15px;   
+            color: $secondary-theme-color;                        
+            display: flex;
+            justify-content: center;                        
+            height: 45px;
+            width: 45px;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+            i {
+                font-size: 2.6rem;
+            }
+            &:hover {
+                background-color: darken($primary-theme-color,10%);
+                color: white;
+            }
+        }
+    }
+}

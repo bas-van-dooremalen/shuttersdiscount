@@ -1,96 +1,92 @@
-footer {
-    &.site-footer {              
-        .footer {
-            background-color: #c5b9ac;        
-            color: white;
-            margin-top: 40px;
-            padding-bottom: 40px;
-            padding-top: 40px;
-        }
-        
-        .impression {
-            padding-top: 20px;
-        }
-        @media (min-width: 992px) {
-            .branding {
-                max-width: 60%;
-            }
-        }
-        a { color: white; }
+.site-footer {
+    background-color: #f7f7f7; 
+    font-size: 1.6rem;
+    padding-top: 30px;
 
-        .shortcut-items {
+    a {
+        &:hover{
+            color: $primary-theme-color;
+        }
+    }
+
+    .footer-intro {
+        .site-logo {
+            display: flex;
+            padding-bottom: 15px;
+        }
+        .social {
+            justify-content: flex-start;
+            li {
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }        
+    }
+    
+    ul { padding-top: 15px; } 
+
+    .title {
+        font-family: $heading-font-family;
+        font-weight: 700;                        
+    }
+
+    .company-hours {
+        li {
             align-items: center;
             display: flex;
-            justify-content: flex-start;
-            @media (min-width: 992px) {
-                justify-content: space-between;
-                flex-direction: row;
-            }
+            justify-content: space-between;
         }
-        ul {
-            &.social-media {
-                align-items: center;
-                display: flex;
-                @media (min-width:992px) {
-                    padding-top: 20px;
-                }
-                li {
-                    padding-right: 40px;
-                    &:last-child { padding-right: 0; }
-                    a {
-                        color: white;
-                        transition: color .2s ease-in-out;
-                        &:hover { color: #333; } 
-                        i { font-size: 3.2rem; }
-                    }
-                }
-            }
-
-            &.shortcuts {   
-                padding-top: 20px;
-                @media (min-width:992px) {
-                    padding-top: 54px;
-                }
-                li {
-                    &:first-child {
-                        font-weight: 700;
-                        font-size: 1.9rem;
-                    }
-                    a {
-                        border-bottom: 0;
-                        color: white;
-                        text-decoration: none;
-                        transition: all .2s ease-in;
-                        &:hover {
-                            border-bottom: 1px solid white;
-                        }
-                    }
-                }
-            }
-        }
-        
-        .info {
-            @media (min-width:992px) {
-                padding-top: 85px;
-            }
-        }
-        .copy {
-            background-color: rgb(130, 124, 120);                        
-            color: white;
-            padding-bottom: 20px;
-            padding-top: 20px; 
+    }
+    .primary {
+        padding-bottom: 30px;
+    }
+    .secondary {
+        border-top: 1px solid $primary-theme-color;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        .avg {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
 
             ul {
-                @media (min-width:992px) {
-                    align-items: center;
-                    display: flex;
-                    justify-content: flex-start;
+                align-items: center;
+                display: flex;
+                justify-content: flex-start;
+                padding-top: 0;
+                @media (min-width: 992px) {
+                    margin-left: 15px;
+                    padding-left: 75px;
+                    position: relative;
+                    &::before {
+                        background-color: $primary-theme-color;
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        height: 1px;
+                        width: 50px;
+                    }
                 }
                 li {
-                    @media (min-width:992px) {
-                        padding-right: 15px;
+                    padding-bottom: 7.5px;
+                    @media (min-width: 992px) {
+                        &:first-child {
+                            padding-left: 0;
+                        }
+                        padding-left: 7.5px;
+                        padding-right: 7.5px;
                         &:last-child {
                             padding-right: 0;
+                            margin-left: auto;
+                            
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        &:hover {
+                            color: $primary-theme-color;
                         }
                     }
                 }
@@ -99,8 +95,7 @@ footer {
     }
 }
 
-.whatsapp {
-    
+.whatsapp {     
     display: inline-block;
     position: fixed;
     right: 20px;

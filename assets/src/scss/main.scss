@@ -1,13 +1,18 @@
 @import "abstracts/variables";
 
 @import "vendors/bootstrap-5.0.2/bootstrap",
-        "vendors/hamburgers/hamburgers";
-
+        "vendors/hamburgers/hamburgers",        
+        "vendors/fontawesome-5.15/fontawesome",
+        "vendors/fontawesome-5.15/brands",
+        "vendors/fontawesome-5.15/solid",
+        "vendors/fontawesome-5.15/regular",
+        "vendors/owlcarousel-2.3.4/owl.carousel",
+        "vendors/owlcarousel-2.3.4/owl.theme.default";
+        
 @import "base/fonts",
         "base/base";
 
-@import "layout/customers",
-        "layout/contact-widget",
+@import "layout/contact-widget",
         "layout/deals",
         "layout/header",
         "layout/footer",
@@ -16,16 +21,15 @@
         "layout/highlighted",
         "layout/packages",
         "layout/upperbar",
+        "layout/reviews",
         "layout/sidebar",
         "layout/sellingpoints";
 
 @import "components/buttons",
         "components/calculator",
-        "components/widget",        
-        //"components/modal",
-        //"components/sticky",
+        "components/socials",
+        "components/widget",  
         "components/tabs";
-        //"components/tns";
 
 @import "pages/front-page",
         "pages/quotation-page",

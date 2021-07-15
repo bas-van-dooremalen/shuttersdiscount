@@ -4,7 +4,7 @@
     */
 ?>
 
-<div class="site-customers">	
+<div class="site-reviews">	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-lg-8 mx-auto txt-center">
@@ -13,9 +13,8 @@
 			</div>			
 		</div>
 		<div class="row">
-			<div class="col-sm-12 col-lg-4">
-				<div class="review">
-					
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="review">					
 					<div class="review-picture">
 						<div class="review-user">							
 							<span>Merel De Klerk</span>
@@ -33,7 +32,7 @@
 				</div>			
 			</div>
 
-			<div class="col-sm-12 col-lg-4">
+			<div class="col-sm-12 col-md-6 col-lg-4 px-4">
 				<div class="review">
 					<div class="review-picture">
 						<div class="review-user">
@@ -50,32 +49,11 @@
 				</div>
 			</div>
 			
-			<div class="col-sm-12 col-lg-4">
+			<div class="col-sm-12 col-md-6 col-lg-4">
 				<div class="review">
 					<div class="review-banner">
-						Meer reviews en inspiratie <br/> vind je op onze <br/>Social media kanalen.
-						<ul class="social"> 
-							<li class="social-item">
-								<a href="https://www.facebook.com/ShuttersDiscount/" class="social social-fb">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li class="social-item">										
-								<a href="https://www.instagram.com/shuttersdiscount/" class="social social-insta">
-									<i class="fab fa-instagram"></i>
-								</a>
-							</li>
-							<li class="social-item">										
-								<a href="https://www.instagram.com/shuttersdiscount/" class="social social-yt">
-									<i class="fab fa-youtube"></i>
-								</a>
-							</li>
-							<li class="social-item">										
-								<a href="https://www.instagram.com/shuttersdiscount/" class="social social-yt">
-									<i class="fab fa-pinterest-p"></i>
-								</a>
-							</li>
-						</ul>
+						<p>Meer reviews en inspiratie <br/> vind je op onze <br/>Social media kanalen.</p>	
+						<?php get_template_part('partials/shutters','socials'); ?>
 					</div>
 					<div class="review-social">
 						Shutters inspiratie op doen of andere <br/> ervaringen lezen?						

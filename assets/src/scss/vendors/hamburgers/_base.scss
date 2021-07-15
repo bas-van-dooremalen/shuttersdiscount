@@ -21,9 +21,8 @@
   z-index: 100;
   position: relative;
   &::after {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     content: 'MENU';
-    font-weight: 700;
     color: $secondary-theme-color;
   }
   &:hover {
@@ -37,8 +36,7 @@
 
   &.is-active {
     &::after {
-      content: '';
-  
+      content: '';  
     }
     &:hover {
       @if $hamburger-hover-use-filter == true {

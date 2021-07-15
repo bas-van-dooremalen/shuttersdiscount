@@ -3,9 +3,11 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    padding: 0 15px;
+    padding-right: 15px;
+    padding-left: 15px;
     width: 100%;
     z-index: 5;
+    
     .site-branding {         
         position: relative;
         padding-top: 15px;
@@ -136,22 +138,14 @@
     .site-header {
         align-items: center;
         background-color: transparent;
-        justify-content: flex-start;
+        justify-content: space-between;
         max-width: 1140px;
-     
-        .site-branding {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    }
-
-    nav {
-        &.site-navigation {
-            width: 100%;
-            ul {
+        .site-navigation {            
+            .menu {
                 display: flex;
                 li {                    
-                    padding-right: 15px;
+                    padding-left: 30px;
+                    padding-right: 0;
                     &.current_page_item  {
                         a { border-color: $primary-theme-color; }
                     }
@@ -172,14 +166,5 @@
 @media (min-width: 1400px) {
     .site-header {
         max-width: 1320px;       
-    }
-    nav {
-        &.site-navigation {
-            ul {
-                li {
-                    padding-left: 15px;
-                }
-            }
-        }
     }
 }

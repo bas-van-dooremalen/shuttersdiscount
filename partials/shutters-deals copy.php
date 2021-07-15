@@ -6,12 +6,51 @@
     if( $featured_posts ): 
 ?>
 
+
+<div class="container">
+    <?php foreach( $featured_posts as $post ): 
+        $price = get_field('price');
+        $hot = get_field('most_wanted');
+        $description = get_field('description');
+            
+        //product image
+        $image = get_field('featured_img');
+        $url = $image['url'];
+        $title = $image['title'];
+        $alt = $image['alt'];
+        $size = 'deals';
+        $thumb = $image['sizes'][ $size ];
+        $width = $image['sizes'][ $size . '-width' ];
+        $height = $image['sizes'][ $size . '-height' ]; 
+
+        setup_postdata($post); ?>
+
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="image">
+                    <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" class="img-fluid" width="640" height="480" />	
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                <div class="content">
+                    <h3><?php the_title(); ?></h3>
+                    <span class="price">vanaf € <?php echo $price; ?>,- / m<sup>2</sup></span>
+                    <p><?php echo $description; ?></p>
+                </div>
+            </div>
+        </div>
+        
+        <?php endforeach; ?>
+</div>
+
 <div class="container">
     <div class="row">
         <?php foreach( $featured_posts as $post ): 
             $price = get_field('price');
             $hot = get_field('most_wanted');
+            $description = get_field('description');
 
+            //product image
             $image = get_field('featured_img');
             $url = $image['url'];
             $title = $image['title'];
@@ -23,7 +62,7 @@
 
             setup_postdata($post); ?>
             
-            <article class="col-sm-12 col-md-6 col-lg-4 px-4">
+            <article class="col-sm-12 col-md-6 col-lg-4">
                 <a href="<?php the_permalink(); ?>" class="deal <?php if( $hot ): ?>hot<?php endif; ?>">
                     <?php if( $hot ): ?>
                         <span class="label-hot">
@@ -47,7 +86,7 @@
                     </div>
                 </a>
                 
-                <a href="#" class="btn btn-secondary mx-auto">Offerte aanvragen</a>																							
+                <a href="#" class="btn btn-primary mx-auto">Offerte aanvragen</a>																							
 
             </article>
 

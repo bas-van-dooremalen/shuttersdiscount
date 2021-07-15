@@ -1,10 +1,15 @@
 .site-highlighted {
-    padding-top: 2.5em;
+    padding-bottom: 30px;
+    padding-top: 15px;
     ul {
-        li {
-            margin-bottom: 1.2em;
+        padding-bottom: 15px;
+        li {     
+            padding: 10px;
+            a {
+                cursor: pointer;
+            }
             img {
-                border-radius: 0 40px 0 40px;
+                border-radius: 0 40px 0 40px;                              
             }             
         }
     }
