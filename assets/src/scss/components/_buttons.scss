@@ -30,7 +30,7 @@
 
     &.button-secondary {
         background-color: $primary-theme-color;
-        border: 1px solid white; 
+        border: 1px solid $primary-theme-color; 
         color: white;
         &:hover {
             background-color: white;

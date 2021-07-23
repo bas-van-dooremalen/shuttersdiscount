@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'owl.carousel';
+import Swiper from 'swiper/bundle';
 
 class General {
 	constructor() {
@@ -8,27 +8,58 @@ class General {
 	}
 
 	init() {
-		// for tests purposes only
-		console.log(this.testVariable);
-
-		$('.owl-carousel').owlCarousel({
-			center: true,
-			loop: true,
-			dots: true,
-			nav: false,
-			responsive: {
-				0: {
-					items: 1
-				},
-				600: {
-					items: 1
-				},
-				1000: {
-					items: 2,
-					margin: 10,
-				}
-			}
+		$('.hamburger').click(function() {
+			$(this).toggleClass('is-active');
 		});
+
+		// Init Swiper:
+		new Swiper('.swiper-container', {
+			autoplay: {
+				delay: 4000,
+			},
+			centeredSlides: true,
+			loop: true,
+			disableOnInteraction: true,
+			keyboard: {
+				enabled: true,
+				onlyInViewport: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			},
+			speed: 1500,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			breakpoints: {
+				320: {
+					slidesPerView: 1
+				},				
+				640: {
+					slidesPerView: 2
+				},
+				992: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 2
+				},
+				1400: {
+					slidesPerView: 3
+				}
+			} 
+		});
+
+		var swiper = document.querySelector('.swiper-container').swiper;
+	
+		$(".swiper-container").mouseenter(function() {
+			swiper.autoplay.stop();
+		});
+	
+		$(".swiper-container").mouseleave(function() {
+			swiper.autoplay.start()
+		});
+		
 	}
 }
 
