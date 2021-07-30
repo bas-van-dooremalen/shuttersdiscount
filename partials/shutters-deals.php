@@ -8,7 +8,7 @@
 <div class="container-fluid">
     <div class="row g-0">
         <div class="col-sm-12">
-            <div class="swiper-container deals deals-slider">                
+            <div class="swiper-container slider1 deals">                
                 <div class="swiper-wrapper">
                     <?php foreach( $featured_posts as $post ): 
                         $price              = get_field('price');

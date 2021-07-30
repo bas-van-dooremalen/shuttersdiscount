@@ -12,8 +12,9 @@ class General {
 			$(this).toggleClass('is-active');
 		});
 
-		// Init Swiper:
-		new Swiper('.swiper-container', {
+		// Init Swiper
+
+		var slider1 = new Swiper ('.slider1', {
 			autoplay: {
 				delay: 4000,
 			},
@@ -50,17 +51,17 @@ class General {
 			} 
 		});
 
-		var swiper = document.querySelector('.swiper-container').swiper;
+		var swiper = document.querySelector('.slider1').swiper;
 	
-		$(".swiper-container").mouseenter(function() {
+		$('.slider1').mouseenter(function() {
 			swiper.autoplay.stop();
 		});
 	
-		$(".swiper-container").mouseleave(function() {
+		$('.slider1').mouseleave(function() {
 			swiper.autoplay.start()
 		});
 		
-	}
+	}	
 }
 
 export default General;
