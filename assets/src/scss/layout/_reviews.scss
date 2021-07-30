@@ -39,7 +39,9 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
-            
+            @media (min-width: 1200px) {
+                justify-content: flex-start;
+            }
             margin-bottom: 30px;
             position: relative;            
             
@@ -50,6 +52,9 @@
                 }
                 @media (min-width: 992px) {
                     width: 31%;
+                }
+                @media (min-width: 1200px) {
+                    width: 21%;
                 }
                 img {
                     border-radius: 0 15px 0 15px;                    
