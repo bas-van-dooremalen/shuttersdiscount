@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-sm-12 col-lg-8 mx-auto txt-center">
 				<h4>Shutters beoordelingen.</h4>
-				<p>Waarom klanten kopen bij Shuttersdiscount.nl, meer beoorderlingen vind je op <a href="https://www.facebook.com/ShuttersDiscount/">Facebook</a> of <a href="https://www.instagram.com/shuttersdiscount/">Instagram</a>.</p>
+				<p>Waarom klanten kopen bij Shuttersdiscount.nl, meer beoordelingen vind je op <a href="https://www.facebook.com/ShuttersDiscount/">Facebook</a> of <a href="https://www.instagram.com/shuttersdiscount/">Instagram</a>.</p>
 				<ul>
 					<li>
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -71,9 +71,7 @@
 								</div>
 							<?php endif; ?>
 							<div class="review <?php if( ! get_field('image') ): ?>with-out-img<?php endif; ?>">
-								<?php echo $review_content; ?>							
-								
-
+								<?php echo $review_content; ?>		
 								<span class="name"><?php echo $review_name; ?></span>
 							</div>
 						</div>

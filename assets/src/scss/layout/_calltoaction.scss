@@ -1,0 +1,99 @@
+.site-call-to-action {      
+    background-color: white;
+    position: relative;   
+    cursor: default;
+    
+    .bar {
+        background-color: white;
+        box-shadow: 0 0 40px 0 rgba($secondary-theme-color,.6);    
+        height: fit-content;
+        position: fixed;
+        width: 100%;        
+        bottom: -100vh;
+        opacity: 0;
+        transition: bottom .4s cubic-bezier(.42,0,.18,.99);        
+        z-index: -1;
+        
+        &.active {
+            opacity: 1;
+            bottom: 0;
+            z-index: 10;
+        }
+    
+    }
+
+    .bar-top {
+        justify-content: flex-end;
+        background-color: $primary-theme-color;
+        color: white;
+        display: flex;
+        height: 35px;       
+        transition: all .2s ease-in-out;
+        button {
+            background-color: transparent;
+            border: none;
+        }
+        svg {
+            fill: white;            
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    .bar-contains {
+        background-color: white;
+        height: 100%;
+        padding-top: 30px;
+        margin: auto;
+        transition: all .2s ease-in-out;        
+        
+        h2 {
+            font-size: 2.1rem;
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+            svg {
+                fill: $kings-theme-color;
+                height: 30px;
+                width: 30px;
+            }
+        }
+        p {
+            padding-top: 10px;
+        }
+
+        form {
+            p {
+                margin-bottom: 0;
+            }
+            .form-group {
+                flex-direction: row;
+               
+                .group {                    
+                    padding-left: 7.5px;
+                    padding-right: 7.5px;
+                }
+            }
+            input {
+                &[type="submit"] {
+                    width: fit-content;
+                    margin-top: 25px;
+                    text-align: center;
+                }
+            }
+            .privacy {
+                .wpcf7-acceptance {
+                    .wpcf7-list-item-label {
+                        padding-left: 35px;
+                        &::before {
+                            left: 5px;
+                            top: 5px;
+                        }
+                        .input-title {
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

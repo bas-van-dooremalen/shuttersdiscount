@@ -15,11 +15,8 @@ body {
     transition: filter .4s ease-in;    
     -webkit-font-smoothing: antialiased;
 
-    &.lock {
-        overflow-y: hidden;
-        div[class^="site-"]:not(.site-header):not(.site-branding):not(.site-upperbar) {            
-            filter: grayscale(1);
-        }
+    &.on-lock {
+        overflow-y: hidden;        
     }
 } 
 
@@ -30,6 +27,7 @@ a {
     &:hover,
     &:focus,
     &:active {
+        color: $primary-theme-color;
         text-decoration: none;
     } 
 }

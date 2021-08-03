@@ -8,12 +8,44 @@ class General {
 	}
 
 	init() {
-		$('.hamburger').click(function() {
-			$(this).toggleClass('is-active');
+		// Toggle mobile menu
+		const hamburger = document.getElementById('toggle');
+		const nav = document.getElementById('navigation');
+		const lock = document.body; 
+
+		hamburger.onclick = function() {
+			this.classList.toggle('is-active');
+			nav.classList.toggle('is-open');
+			lock.classList.toggle('on-lock');
+		}
+
+		// Toggle callmeback form 
+		const el = document.getElementById('toggleForm');
+		const bar = document.querySelector('.bar'); 
+		const $elBar = $('.bar');
+		const btn = document.querySelector('.formButton'); 
+
+		$(document).mouseup(e => {
+			if (!$elBar.is(e.target) && $elBar.has(e.target).length === 0) {
+				$elBar.removeClass('active');
+				btn.classList.remove('active');
+			}  		
 		});
+		
+		el.onclick = function() {
+			bar.classList.add('active');	
+			this.classList.add('active');
+		}
 
+		// Close callmeback form
+		const closeForm = document.getElementById('closeForm');
+
+		closeForm.onclick = function() {
+			bar.classList.remove('active');
+			btn.classList.remove('active');			
+		}		
+	
 		// Init Swiper
-
 		var slider1 = new Swiper ('.slider1', {
 			autoplay: {
 				delay: 4000,

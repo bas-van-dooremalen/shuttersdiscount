@@ -10,7 +10,6 @@
     }
 
     .footer-intro {
-
         .site-logo {
             @media (min-width: 768px) and (max-width: 992px){
                 align-items: center;
@@ -148,7 +147,7 @@
     bottom: 20px;
     height: 60px;
     width: 60px;
-    z-index: 100;        
+    z-index: 10;        
     a { 
         text-decoration: none;        
         picture {            
