@@ -45,6 +45,7 @@
 						$loop = new WP_Query( array(
 							'post_type' => 'shutter-review',
 							'posts_per_page' => 1,
+							'order'    => 'ASC',
 							'orderby' => 'rand'
 						));
 					?>

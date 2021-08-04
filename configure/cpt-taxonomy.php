@@ -33,7 +33,7 @@ function shutter_deals() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'shutters-prijzen' ),
+		'rewrite'            => array( 'slug' => 'shutters-prijs' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => true,
