@@ -91,5 +91,18 @@
 
 <?php get_template_part( 'partials/shutters','callmeback' ); ?>
 
+<div class="site-quote">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<blockquote class="quote">
+					Wij maken jouw smaak.
+					<cite>Roger Salfischberger</cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</div>
+
 <?php
 get_footer();

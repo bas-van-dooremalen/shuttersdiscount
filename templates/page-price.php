@@ -11,9 +11,9 @@
 			<div class="col-sm-12 col-md-8">
 
 				<?php while(have_posts()) : the_post(); ?>
-					<ul>
-						<?php the_title('<h1>', '</h1>'); ?>
-					</ul>
+					
+                    <?php the_title('<h1>', '</h1>'); ?>
+					
 					<?php the_content(); ?>
 
 				<?php endwhile; ?>
@@ -23,6 +23,7 @@
 	</div>
 </div>
 
+<?php get_template_part( 'partials/shutters','shortcuts' ); ?>	
 
 <div class="site-packages">
 	<div class="container">
@@ -54,30 +55,29 @@
                     $height             = $image['sizes'][ $size . '-height' ]; 
                 ?>
                 <div class="col-sm-12 col-md-6 col-lg-6 px-4">
-
                     <div class="item <?php if( $favorite_deal ) : ?>item-favorite<?php endif; ?>">
                             
-                        <div class="package">                                                                
-                            <a href="<?php the_permalink();?>">
-                                <?php if( $favorite_deal ) : ?> 
-                                    <span class="favorite-deal"> Favoriet <i class="fas fa-heart"></i> </span>
-                                <?php endif; ?>   
-                                
-                                <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" width="640" height="480" />	    
-                            </a>
-
+                        <div class="package">                                                                                         
+                        
+                            <?php if( $favorite_deal ) : ?> 
+                                <span class="favorite-deal"> Favoriet <i class="fas fa-heart"></i> </span>
+                            <?php endif; ?>   
+                            
                             <div class="box">
 
-                                <span class="title h2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
-                                
+                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <span class="price">Vanaf <strong>€ <?php echo $price; ?>,-</strong> per m<sub>2</sub> </span>
+
                             </div>
                             
+                            <a href="<?php the_permalink();?>">
+                                <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" width="640" height="480" />	    
+                            </a>
+                            
                             <a href="<?php echo get_site_url(); ?>/shutters-offerte" class="button button-primary">Offerte aanvragen</a>                       
-                        </div>   
+                        </div>  
                     
                     </div>
-
                 </div>
             <?php endwhile; wp_reset_query(); ?>
 		</div>

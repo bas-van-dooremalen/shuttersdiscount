@@ -27,7 +27,21 @@
             color: black;            
         }
     }
-
+    &.button-whatsapp {
+        border-color: #50a9a5;
+        color: #50a9a5;
+        svg {
+            fill: #50a9a5;
+        }
+        &:hover {
+            background-color: #50a9a5;
+            border-color: white;
+            color: white;
+            svg {
+                fill: white;
+            }
+        }
+    }
     &.button-secondary {
         background-color: $primary-theme-color;
         border: 1px solid $primary-theme-color; 

@@ -17,9 +17,32 @@
         justify-content: flex-start;
         flex-direction: column;        
         position: relative;
+        top: 0;
+        transition: top .2s ease-in;
+        &:hover {
+            top: -5px;
+            .box {
+                h3 {
+                    bottom: 30px;
+                    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+                    a {
+                        color: white;
+                    }
+                }   
+                          
+                .price {
+                    bottom: 25px;
+                    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+                }
+            }
+        }
         a {
             text-decoration: none;
+            &.button {
+                margin-top: 30px;
+            }
         }
+
         .price {
             strong {
                 font-weight: normal;
@@ -50,36 +73,36 @@
 
         .box {
             align-items: center;
-            background-color: #f2f2f2;            
-            color: #827c78;
             display: flex;
-            justify-content: center;
             flex-direction: column;
-            width: 80%;
-            padding: 5px;
-            @media (min-width:992px) {
-                padding: 15px 60px;
-            }
-            position: relative;
-            top: -30px;
-            line-height: 1,2;
-            z-index: 5;
+            bottom: 95px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 50;
         }
 
-        .title {
-            font-size: 1.7rem;
-            @media (min-width:992px) {
-                font-size: 1.9rem;        
-            }    
+        h3 {           
             margin: 0;
+            bottom: 0;
+            position: relative;
+            transition: bottom .3s ease-in-out;
             a {
-                color: #827c78;                
+                color: $primary-theme-color;                
                 text-decoration: none;
             }
         }
+
         .price {
+            bottom: 0;
+            color: white;
             font-size: 1.4rem;
+            text-transform: lowercase;
+            text-shadow: inherit;
+            transition: all .4s ease-in-out;
+            position: relative;
         }
+
         picture {            
             display: flex;
             position: relative;                    
@@ -119,7 +142,10 @@
         }
         img {
             border-radius: 30px 0 30px 0;
-            height: 40vh;
+            height: 28vh;
+            @media (min-width:410px) {  
+                height: 40vh;
+            }
             @media (min-width:1200px) {  
                 height: 50vh;
             }

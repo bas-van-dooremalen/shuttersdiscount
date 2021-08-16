@@ -1,0 +1,27 @@
+.site-shortcuts {
+    padding-bottom: 30px;
+    ul {
+        display: flex;
+        flex-direction: column;
+       
+        @media (min-width:992px) {
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }                
+
+        li {
+            margin:15px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            @media (min-width: 992px) {             
+                padding-right: 15px;
+                padding-left: 15px;   
+            }
+        }
+    }
+}
